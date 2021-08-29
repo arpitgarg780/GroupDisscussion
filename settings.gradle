@@ -1,0 +1,2 @@
+rootProject.name = "GroupDisscussion"
+include ':app'
