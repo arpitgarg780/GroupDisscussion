@@ -70,8 +70,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/button_white"
-                    android:text="@={authViewModel.email}" />
+                    android:background="@drawable/button_white" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,8 +92,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:background="@drawable/button_white"
-                        android:inputType="textPassword"
-                        android:text="@={authViewModel.passowrd}" />
+                        android:inputType="textPassword"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
@@ -110,7 +108,6 @@
                     android:id="@+id/btLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="@{authViewModel.onLoginButtonClick}"
                     android:text="Sign In"
                     android:textAllCaps="false"
                     android:background="@drawable/button_color1" />
@@ -123,12 +120,12 @@
                     android:onClick="@{authViewModel.onGotoRegisterClick}">
 
                     <TextView
-                        android:id="@+id/btRegister"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="I am a new user. " />
 
                     <TextView
+                        android:id="@+id/btRegister"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sign Up"
