@@ -1,124 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     >
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/ivdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvusername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name" />
-
-            <TextView
-                android:id="@+id/tvratings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ratings" />
-
-            <TextView
-                android:id="@+id/tvlang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="language" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <Button
-            android:id="@+id/btjoinroom"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:backgroundTint="#4DC7D6"
-            android:text="JOIN A ROOM"
-            android:textColor="@color/black"
-            android:padding="10dp"/>
-
-        <Button
-            android:id="@+id/btcreateroom"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:backgroundTint="#34A8B6"
-            android:text="CREATE A ROOM"
-            android:textColor="@color/black"
-            android:padding="10dp"/>
-
-        <Button
-            android:id="@+id/btjoinratings"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:backgroundTint="#1892A1"
-            android:text="JOIN THROUGH RATINGS"
-            android:textColor="@color/black"
-            android:padding="10dp"
-            />
-    </GridLayout>
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="50dp"
+    >
     <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/ic_baseline_settings_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:padding="10dp"
-        />
-
-    <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/ic_baseline_leaderboard_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"/>
-
-    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_person_24"
+        android:id="@+id/ibt_dp"/>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="20dp"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user name"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_username"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ratings"
+            android:id="@+id/tv_ratings"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+   <GridLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <Button
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="join room"
+           android:layout_marginLeft="20dp"
+           android:layout_row="0"
+           android:layout_column="0"/>
+       <Button
+           android:text="create a room"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:layout_marginLeft="20dp"
+           android:layout_row="0"
+           android:layout_column="1"/>
+
+   </GridLayout>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="Room code  "
+            android:layout_marginLeft="40dp"
+            android:layout_row="0"
+            android:layout_column="0"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="join"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/bt_join"
+            android:layout_row="0"
+            android:layout_column="1"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="40dp"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </GridLayout>
+
+
+</LinearLayout>
