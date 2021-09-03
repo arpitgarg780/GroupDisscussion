@@ -10,4 +10,8 @@
 
     <color name="color1">#8a4ada</color>
     <color name="dashboard_bg">#EBE7ED</color>
+
+    <color name="p_color1">#4DC7D6</color>
+    <color name="p_color2">#34A8B6</color>
+    <color name="p_color3">#1892A1</color>
 </resources>

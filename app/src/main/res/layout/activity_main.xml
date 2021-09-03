@@ -5,100 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    >
+    android:background="#191a2b"
+    android:orientation="vertical">
 
     <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_margin="50dp"
-    >
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_baseline_person_24"
-        android:id="@+id/ibt_dp"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="user name"
-            android:layout_margin="10dp"
-            android:id="@+id/tv_username"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ratings"
-            android:id="@+id/tv_ratings"
-            android:layout_marginLeft="10dp"/>
-    </LinearLayout>
-
-
-</LinearLayout>
-   <GridLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center">
-       <Button
-           android:layout_height="wrap_content"
-           android:layout_width="wrap_content"
-           android:text="join room"
-
-           android:layout_row="0"
-           android:layout_gravity="fill"
-           android:layout_columnWeight="1"
-           android:layout_column="0"/>
-       <Button
-           android:text="create a room"
-           android:layout_height="wrap_content"
-           android:layout_width="wrap_content"
-           android:layout_marginLeft="20dp"
-           android:layout_row="0"
-           android:layout_column="1"
-           android:layout_gravity="fill"
-           android:layout_columnWeight="1"/>
-
-   </GridLayout>
-    <GridLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <EditText
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:hint="Room code  "
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="join"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
-            android:id="@+id/bt_join"
-            android:layout_row="0"
-            android:layout_column="1"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
-            >
+            android:orientation="horizontal"
+            android:layout_margin="50dp">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:id="@+id/ibt_dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user name"
+                    android:textColor="#fff"
+                    android:layout_margin="10dp"
+                    android:id="@+id/tv_username" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings"
+                    android:textColor="#fff"
+                    android:id="@+id/tv_ratings"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
 
 
-        </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
 
-    </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="join room"
+                android:background="@android:color/transparent"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <Button
+                android:text="create a room"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_row="0"
+                android:background="@drawable/blue_box_20"
+                android:layout_column="1"
+                />
+
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#272a3d"
+            android:layout_marginBottom="5dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:background="@drawable/grey_box_20"
+                    android:textColorHint="#fff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:hint="Room code"
+                    android:padding="10dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1" />
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="join"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/blue_box_20"
+                    android:id="@+id/bt_join"
+                    android:layout_row="0"
+                    android:layout_column="1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#272a3d">
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 
 </LinearLayout>

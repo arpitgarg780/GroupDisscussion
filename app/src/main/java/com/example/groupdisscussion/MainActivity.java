@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindViews() {
-        bt_logout = findViewById(R.id.btLogout);
+//        bt_logout = findViewById(R.id.btLogout);
     }
 
     private void initilize() {
