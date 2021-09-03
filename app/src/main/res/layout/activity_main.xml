@@ -40,14 +40,17 @@
 
 </LinearLayout>
    <GridLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center">
        <Button
            android:layout_height="wrap_content"
            android:layout_width="wrap_content"
            android:text="join room"
-           android:layout_marginLeft="20dp"
+
            android:layout_row="0"
+           android:layout_gravity="fill"
+           android:layout_columnWeight="1"
            android:layout_column="0"/>
        <Button
            android:text="create a room"
@@ -55,34 +58,41 @@
            android:layout_width="wrap_content"
            android:layout_marginLeft="20dp"
            android:layout_row="0"
-           android:layout_column="1"/>
+           android:layout_column="1"
+           android:layout_gravity="fill"
+           android:layout_columnWeight="1"/>
 
    </GridLayout>
     <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
         <EditText
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:hint="Room code  "
-            android:layout_marginLeft="40dp"
             android:layout_row="0"
-            android:layout_column="0"/>
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            />
         <Button
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="join"
-            android:layout_marginLeft="40dp"
+
             android:id="@+id/bt_join"
             android:layout_row="0"
             android:layout_column="1"
             />
+
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_marginLeft="40dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
             >
 
 
