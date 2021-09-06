@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(mAuth.getCurrentUser()==null){
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+
         }
         else{
             fstore.collection("category").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
