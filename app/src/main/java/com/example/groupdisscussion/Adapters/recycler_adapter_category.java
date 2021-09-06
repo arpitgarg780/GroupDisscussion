@@ -1,5 +1,6 @@
 package com.example.groupdisscussion.Adapters;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,17 +26,19 @@ public class recycler_adapter_category extends RecyclerView.Adapter<recycler_ada
     @NotNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        return null;
+       View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.topic_recycler_view_layout,parent,false);
+
+        return new viewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull recycler_adapter_category.viewHolder holder, int position) {
-
+        holder.b_category.setText(topicArrayList.get(position).getCategory());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return topicArrayList.size();
     }
 
     class viewHolder extends RecyclerView.ViewHolder{
